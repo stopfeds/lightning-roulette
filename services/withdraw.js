@@ -84,7 +84,7 @@ const processWithdraws = async () => {
       }
 
       if (withdrawLock) {
-        throw new Error("Please waith until previous withdraw is settled");
+        throw new Error("Please wait until previous withdraw is settled");
       }
 
       if (withdrawAt && Date.now() < withdrawAt.toMillis() + WITDHRAW_LOCK) {
